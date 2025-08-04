@@ -20,6 +20,34 @@
       "queryLines": [
         "SELECT * FROM newyork.gold.avg_total_amount_month ORDER BY year, month_dropoff"
       ]
+    },
+    {
+      "name": "505ac0fe",
+      "displayName": "Untitled dataset",
+      "queryLines": [
+        "SELECT * FROM newyork.gold.avg_passager_count_hourly"
+      ]
+    },
+    {
+      "name": "61dc6f61",
+      "displayName": "Untitled dataset",
+      "queryLines": [
+        "SELECT * FROM newyork.gold.avg_passager_count_hourly"
+      ]
+    },
+    {
+      "name": "b31958de",
+      "displayName": "Untitled dataset",
+      "queryLines": [
+        "SELECT * FROM newyork.gold.avg_total_amount_count_hourly"
+      ]
+    },
+    {
+      "name": "7ddc1d8c",
+      "displayName": "Untitled dataset",
+      "queryLines": [
+        "SELECT * FROM newyork.gold.rides_per_day"
+      ]
     }
   ],
   "pages": [
@@ -72,12 +100,12 @@
         },
         {
           "widget": {
-            "name": "d1f5a0da",
+            "name": "512af6f8",
             "queries": [
               {
-                "name": "e44b7073a6a846fc898ae856fce47099",
+                "name": "857f39deb2a140efa88b8c2b3a775ebb",
                 "query": {
-                  "datasetName": "0f8c956a",
+                  "datasetName": "61dc6f61",
                   "fields": [
                     {
                       "name": "hora_do_dia",
@@ -98,7 +126,7 @@
                 "display_name": "Passageiros por hora",
                 "viz_type": "CHART",
                 "serialized_options": "{\"isAggregationOn\":true,\"series\":{\"error_y\":{\"type\":\"data\",\"visible\":true},\"stacking\":null},\"coefficient\":1,\"yAxis\":[{\"type\":\"-\"},{\"opposite\":true,\"type\":\"-\"}],\"columnConfigurationMap\":{\"x\":{\"column\":\"hora_do_dia\",\"id\":\"column_8997e3db365\"},\"y\":[{\"column\":\"media_de_passageiros\",\"id\":\"column_8997e3db366\",\"transform\":\"SUM\"}]},\"alignYAxesAtZero\":true,\"direction\":{\"type\":\"counterclockwise\"},\"swappedAxes\":false,\"percentFormat\":\"0[.]00%\",\"textFormat\":\"\",\"legend\":{\"traceorder\":\"normal\"},\"globalSeriesType\":\"line\",\"version\":2,\"sizemode\":\"diameter\",\"seriesOptions\":{\"column_8997e3db366\":{\"name\":\"media_de_passageiros\",\"type\":\"line\",\"yAxis\":0}},\"error_y\":{\"type\":\"data\",\"visible\":true},\"sortX\":true,\"showDataLabels\":false,\"missingValuesAsZero\":true,\"useAggregationsUi\":true,\"numberFormat\":\"0,0.[00000]\",\"dateTimeFormat\":\"DD/MM/YYYY HH:mm\",\"sortY\":true,\"valuesOptions\":{},\"xAxis\":{\"labels\":{\"enabled\":true},\"type\":\"-\"}}",
-                "query_name": "e44b7073a6a846fc898ae856fce47099"
+                "query_name": "857f39deb2a140efa88b8c2b3a775ebb"
               }
             }
           },
@@ -111,12 +139,12 @@
         },
         {
           "widget": {
-            "name": "2b344d7e",
+            "name": "7c656ccd",
             "queries": [
               {
-                "name": "e44b7073a6a846fc898ae856fce47099",
+                "name": "462a8e5db43549ae804b59af2613af58",
                 "query": {
-                  "datasetName": "0daab0e9",
+                  "datasetName": "b31958de",
                   "fields": [
                     {
                       "name": "hora_do_dia",
@@ -137,12 +165,51 @@
                 "display_name": "Visualization 1",
                 "viz_type": "CHART",
                 "serialized_options": "{\"isAggregationOn\":true,\"series\":{\"error_y\":{\"type\":\"data\",\"visible\":true},\"percentValues\":false,\"stacking\":null},\"coefficient\":1,\"yAxis\":[{\"type\":\"-\"},{\"opposite\":true,\"type\":\"-\"}],\"columnConfigurationMap\":{\"x\":{\"column\":\"hora_do_dia\",\"id\":\"column_8997e3db421\"},\"y\":[{\"column\":\"avg_total_amount_count_hourly\",\"id\":\"column_8997e3db422\",\"transform\":\"SUM\"}]},\"alignYAxesAtZero\":true,\"direction\":{\"type\":\"counterclockwise\"},\"swappedAxes\":false,\"percentFormat\":\"0[.]00%\",\"textFormat\":\"\",\"legend\":{\"traceorder\":\"normal\"},\"globalSeriesType\":\"line\",\"version\":2,\"sizemode\":\"diameter\",\"seriesOptions\":{\"column_8997e3db422\":{\"name\":\"avg_total_amount_count_hourly\",\"type\":\"line\",\"yAxis\":0}},\"error_y\":{\"type\":\"data\",\"visible\":true},\"sortX\":true,\"showDataLabels\":false,\"missingValuesAsZero\":true,\"useAggregationsUi\":true,\"numberFormat\":\"0,0.[00000]\",\"dateTimeFormat\":\"DD/MM/YYYY HH:mm\",\"sortY\":true,\"valuesOptions\":{},\"xAxis\":{\"labels\":{\"enabled\":true},\"type\":\"-\"}}",
-                "query_name": "e44b7073a6a846fc898ae856fce47099"
+                "query_name": "462a8e5db43549ae804b59af2613af58"
               }
             }
           },
           "position": {
             "x": 0,
+            "y": 6,
+            "width": 3,
+            "height": 6
+          }
+        },
+        {
+          "widget": {
+            "name": "893dc708",
+            "queries": [
+              {
+                "name": "7cb3d6f8e8124b639e829ec374c6d351",
+                "query": {
+                  "datasetName": "7ddc1d8c",
+                  "fields": [
+                    {
+                      "name": "dia_semana",
+                      "expression": "`dia_semana`"
+                    },
+                    {
+                      "name": "column_79e24951162",
+                      "expression": "SUM(`total_corridas`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 0,
+              "viz_spec": {
+                "display_name": "Corridas por dia",
+                "viz_type": "CHART",
+                "serialized_options": "{\"series\":{\"error_y\":{\"type\":\"data\",\"visible\":true},\"stacking\":null},\"coefficient\":1,\"yAxis\":[{\"type\":\"-\"},{\"opposite\":true,\"type\":\"-\"}],\"columnConfigurationMap\":{\"x\":{\"column\":\"dia_semana\",\"id\":\"column_79e24951161\"},\"y\":[{\"column\":\"total_corridas\",\"id\":\"column_79e24951162\",\"transform\":\"SUM\"}]},\"alignYAxesAtZero\":true,\"direction\":{\"type\":\"counterclockwise\"},\"swappedAxes\":true,\"percentFormat\":\"0[.]00%\",\"textFormat\":\"\",\"legend\":{\"traceorder\":\"normal\"},\"globalSeriesType\":\"column\",\"version\":2,\"sizemode\":\"diameter\",\"seriesOptions\":{\"column_79e24951162\":{\"name\":\"total_corridas\",\"yAxis\":0}},\"error_y\":{\"type\":\"data\",\"visible\":true},\"sortX\":true,\"showDataLabels\":false,\"missingValuesAsZero\":true,\"useAggregationsUi\":true,\"numberFormat\":\"0,0.[00000]\",\"dateTimeFormat\":\"DD/MM/YYYY HH:mm\",\"sortY\":true,\"valuesOptions\":{},\"xAxis\":{\"labels\":{\"enabled\":true},\"type\":\"-\"}}",
+                "query_name": "7cb3d6f8e8124b639e829ec374c6d351"
+              }
+            }
+          },
+          "position": {
+            "x": 3,
             "y": 6,
             "width": 3,
             "height": 6
