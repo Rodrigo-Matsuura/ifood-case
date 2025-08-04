@@ -14,7 +14,7 @@
 ## Arquitetura em Camadas
 
 * **Bronze**: Dados brutos convertidos de `.parquet`, com todos os campos disponíveis. Schema feito com base no primeiro arquivo. 
-* **Silver**: Dados limpos, tipos corrigidos e adicionado coluna com tempo da viagem. 
+* **Silver**: Dados limpos, tipos corrigidos e adicionado coluna com tempo da viagem, tabelas em formato delta. 
 * **Gold**: Views agregadas para consumo direto por dashboards ou analistas.
 
 ---
@@ -30,7 +30,7 @@
 
 ## Como Executar
 
-### Observações sobre execução no Databricks Community Edition
+### Observações sobre execução no Databricks Free Edition
 
 > A **Free Edition do Databricks utiliza clusters serverless com egress (acesso à internet) bloqueado**, o que impede o download direto dos dados da web.
 
