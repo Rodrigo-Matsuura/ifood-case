@@ -7,7 +7,12 @@
 * Realizar a ingestão dos dados públicos de corridas de táxis de Nova York (Yellow Taxis) de **jan a mai/2023**
 * Armazenar esses dados em um **Data Lake particionado por camadas (Bronze, Silver, Gold)**
 * Disponibilizar os dados para análise via SQL e PySpark
-* Responder a perguntas analíticas específicas
+* Responder a perguntas:
+  - "Qual a média de valor total (total\_amount) recebido em um mês
+considerando todos os yellow táxis da frota?"
+  - "Qual a média de passageiros (passenger\_count) por cada hora do dia
+que pegaram táxi no mês de maio considerando todos os táxis da
+frota?"
 
 ---
 
